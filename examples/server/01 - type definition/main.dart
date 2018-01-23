@@ -20,6 +20,12 @@ class TestExpressions {
     id: const ["name", "age"],
     description: "User of the system",
     type: CTT.Object)
+@CTT.Permissions(
+    user: "testuser",
+    group: "testgroup",
+    read: true,
+    write: true
+)
 class User {
   @CTT.Model(
       name: "Name",
