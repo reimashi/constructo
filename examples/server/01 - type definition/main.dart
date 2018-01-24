@@ -14,7 +14,7 @@ class TestExpressions {
   }
 }
 
-@CTT.Model(
+@CTT.Definition(
     name: "User",
     slug: "user",
     id: const ["name", "age"],
@@ -27,7 +27,7 @@ class TestExpressions {
     write: true
 )
 class User {
-  @CTT.Model(
+  @CTT.Definition(
       name: "Name",
       slug: "name",
       description: "User of the system",

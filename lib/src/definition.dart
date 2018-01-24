@@ -1,4 +1,4 @@
-class Model {
+class Definition {
   /// Establish the properties of an object
   /// Real [name]. If not provided, is extracted from the class or variable name.
   /// The [slug] is an internal name used to identificate the object uniquivocamente. If not provided, is extracted from [name].
@@ -13,7 +13,7 @@ class Model {
   ///  - core.num => Constructo.Float64
   ///  - core.double => Constructo.Float64
   ///  - core.int => Constructo.Int64
-  const Model(
+  const Definition(
       {String name = null,
       String slug = null,
       String description = null,
