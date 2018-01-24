@@ -5,12 +5,12 @@ main() {
 }
 
 class TestExpressions {
-  static bool ParentContains(object, parent) {
+  static bool ParentContains(String field, User parent) {
     return parent.age > 18;
   }
 
-  static String Trim(object) {
-    return object.toString().trim();
+  static String Trim(String field) {
+    return field.toString().trim();
   }
 }
 
