@@ -4,6 +4,7 @@ class Definition {
   /// The [slug] is an internal name used to identificate the object uniquivocamente. If not provided, is extracted from [name].
   /// The [description] of the object or atribute.
   /// If [id] is set, two object are equals if his property/properties specified are equals.
+  /// The initial [initValue] if not set. If not defined, null even for numbers or booleans.
   /// The canonical [type] in Constructo definition. Any direct equivalences are set by default for non inherited types:
   ///  - core.Object => Constructo.Object
   ///  - core.Map => Constructo.Object
@@ -18,5 +19,6 @@ class Definition {
       String slug = null,
       String description = null,
       id = null,
+      initValue = null,
       Type type});
 }

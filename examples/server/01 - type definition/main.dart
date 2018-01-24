@@ -43,6 +43,7 @@ class User {
       sanitize: TestExpressions.Trim)
   String name;
 
+  @CTT.Definition(initValue: 1)
   @CTT.Restrictions(
       required: false, minValue: 1.0, maxValue: 8, inValues: const [1, 5, 7])
   int age;
