@@ -1,3 +1,4 @@
+import 'package:constructo/src/magnitudes.dart';
 
 /// Definition of an object.
 class Definition {
@@ -25,5 +26,7 @@ class Definition {
       String description = null,
       id = null,
       initValue = null,
-      Type type});
+      Type type,
+      Magnitudes magnitude = Magnitudes.none,
+      String unit = null});
 }
