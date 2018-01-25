@@ -1,3 +1,4 @@
+/// Metalanguage definitions for objects and framework to work with its.
 library constructo;
 
 export 'src/types.dart';
