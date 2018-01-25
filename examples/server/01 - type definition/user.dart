@@ -1,43 +1,30 @@
-import 'package:constructo/constructo.dart' as CTT;
+import 'package:constructo/constructo.dart';
+import 'package:constructo/constructo_types.dart' as Types;
 import 'utils.dart';
 
-@CTT.Definition(
-    name: "User",
-    slug: "user",
-    id: const ["name", "age"],
-    description: "User of the system",
-    type: CTT.Object)
-@CTT.Permissions(
-    user: "testuser",
-    group: "testgroup",
-    read: true,
-    write: true
-)
+/// User of a computer system
+@Definition(name: "User", slug: "user", id: "idWithOtherName")
+@Permissions(user: "root", read: true, write: true)
+@Permissions(group: "it_staff", read: true, write: false)
 class User {
-  @CTT.Definition(
-      name: "Name",
-      slug: "name",
-      description: "User of the system",
-      type: CTT.String)
-  @CTT.Restrictions(
+  int idWithOtherName;
+
+  @Definition(description: "User real name")
+  @Restrictions(
       required: isNameRequired,
       minLength: 1,
       maxLength: 20,
-      length: 14,
-      inValues: const ["sam", "samuel"],
+      inValues: const ["sam", "samantha"],
       match: "/[A-z]/",
-      contains: "am",
-      sanitize: const[
-        StringSanitizer.Trim
-      ])
+      contains: "sam",
+      sanitize: const[ StringSanitizer.Trim ])
   String name;
 
   static bool isNameRequired(String name, User user) {
     return user.age < 18;
   }
 
-  @CTT.Definition(initValue: 1)
-  @CTT.Restrictions(
-      required: false, minValue: 1.0, maxValue: 8, inValues: const [1, 5, 7])
+  @Definition(initValue: 1, type: Types.UInt16)
+  @Restrictions(required: true, minValue: 0.0, maxValue: 150)
   int age;
 }
