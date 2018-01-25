@@ -1,6 +1,6 @@
-import 'dart:core' as Core;
+library constructo.types;
 
-class Object extends Core.Object {}
+class Complex extends Object {}
 
 abstract class Numeric {}
 
@@ -16,6 +16,4 @@ class UInt32 extends Numeric {}
 
 class Int64 extends Numeric {}
 
-class String extends Numeric {}
-
-class Expression {}
+class Text extends Numeric {}
