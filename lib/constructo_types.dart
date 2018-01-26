@@ -16,4 +16,10 @@ class UInt32 extends Numeric {}
 
 class Int64 extends Numeric {}
 
-class Text extends Numeric {}
+class Text {}
+
+class Color {}
+
+class Moment {}
+
+class GeoPosition {}
