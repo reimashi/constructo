@@ -24,7 +24,7 @@ class User {
     return user.age < 18;
   }
 
-  @Definition(initValue: 1, type: Types.UInt16)
+  @Definition(type: Types.UInt16)
   @Restrictions(required: true, minValue: 0.0, maxValue: 150)
-  int age;
+  int age = 1;
 }

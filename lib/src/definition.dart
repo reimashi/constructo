@@ -8,7 +8,6 @@ class Definition {
   /// * [slug]: Is an internal name used to identificate the object unequivocally. If not provided, is extracted from [name].
   /// * [description] of the object or attribute.
   /// * [id]: For complex objects. If set, two object are equals if his property/properties specified are equals.
-  /// * [initValue]: The default value if not set explicitly. If not defined, the value is null even for numbers or booleans.
   /// * [type]: The canonical [type] in Constructo definition. Any direct equivalences are set by default for non inherited types:
   ///     * `Object` => `Complex`
   ///     * `Map`    => `Complex`
@@ -25,7 +24,6 @@ class Definition {
       String slug = null,
       String description = null,
       id = null,
-      initValue = null,
       Type type,
       Magnitudes magnitude = Magnitudes.none,
       String unit = null});
