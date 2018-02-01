@@ -1,8 +1,7 @@
 /// Magnitudes of measurement.
-enum Magnitudes {
-  none,
-
+enum Magnitude {
   Mass,
+  Weight,
   Time,
   Length,
   ElectricCurrent,
@@ -27,5 +26,6 @@ enum Magnitudes {
   Illuminance,
   Radioactivity, RadioactivityDose,
   CatalyticActivity,
-  Weight
+
+  BinaryInformation
 }

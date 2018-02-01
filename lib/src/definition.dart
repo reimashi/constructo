@@ -1,4 +1,4 @@
-import 'package:constructo/src/magnitudes.dart';
+import 'package:constructo/src/measure/unit.dart';
 
 /// Definition of an object.
 class Definition {
@@ -17,7 +17,6 @@ class Definition {
   ///     * `num`    => `Float64`
   ///     * `double` => `Float64`
   ///     * `int`    => `Int64`
-  /// * [magnitude]: Measurement type of the size.
   /// * [unit]: Unit of measure that stores.
   const Definition(
       {String name = null,
@@ -25,6 +24,5 @@ class Definition {
       String description = null,
       id = null,
       Type type,
-      Magnitudes magnitude = Magnitudes.none,
-      String unit = null});
+      Unit unit = null});
 }

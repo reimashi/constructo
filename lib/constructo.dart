@@ -1,7 +1,8 @@
 /// Metalanguage definitions for objects and framework to work with its.
 library constructo;
 
-export 'src/magnitudes.dart';
-export 'src/definition.dart';
-export 'src/restrictions.dart';
-export 'src/permissions.dart';
+export 'package:constructo/src/measure/magnitude.dart';
+export 'package:constructo/src/measure/unit.dart';
+export 'package:constructo/src/definition.dart';
+export 'package:constructo/src/restrictions.dart';
+export 'package:constructo/src/permissions.dart';
