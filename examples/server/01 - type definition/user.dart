@@ -1,5 +1,6 @@
 import 'package:constructo/constructo.dart';
 import 'package:constructo/constructo_types.dart' as Types;
+import 'package:constructo/constructo_units_si.dart';
 import 'utils.dart';
 
 /// User of a computer system
@@ -27,4 +28,7 @@ class User {
   @Definition(type: Types.UInt16)
   @Restrictions(required: true, minValue: 0.0, maxValue: 150)
   int age = 1;
+
+  @Definition(unit: Kilogram)
+  double weight = 50.0;
 }
