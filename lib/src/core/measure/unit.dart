@@ -1,5 +1,5 @@
-import 'package:constructo/src/measure/magnitude.dart';
-import 'unit_system.dart';
+import 'package:constructo/src/core/measure/magnitude.dart';
+import 'package:constructo/src/core/measure/unit_system.dart';
 
 /// Unit of measurement
 abstract class Unit {

@@ -1,6 +1,6 @@
-import '../magnitude.dart';
-import '../unit.dart';
-import '../unit_system.dart';
+import 'package:constructo/src/core/measure/magnitude.dart';
+import 'package:constructo/src/core/measure/unit.dart';
+import 'package:constructo/src/core/measure/unit_system.dart';
 
 const SIName = "International System of Units";
 const SIStandards = const ["ISO 80000", "IEC 80000"];

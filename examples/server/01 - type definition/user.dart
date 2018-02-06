@@ -1,5 +1,4 @@
 import 'package:constructo/constructo.dart';
-import 'package:constructo/constructo_types.dart' as Types;
 import 'package:constructo/constructo_units_si.dart';
 import 'utils.dart';
 
@@ -25,7 +24,7 @@ class User {
     return user.age < 18;
   }
 
-  @Definition(type: Types.UInt16)
+  @Definition(type: CInt)
   @Restrictions(required: true, minValue: 0.0, maxValue: 150)
   int age = 1;
 

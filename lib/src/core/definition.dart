@@ -1,4 +1,5 @@
-import 'package:constructo/src/measure/unit.dart';
+import 'package:constructo/src/core/measure/unit.dart';
+import 'package:constructo/src/core/type.dart';
 
 /// Definition of an object.
 class Definition {
@@ -9,20 +10,20 @@ class Definition {
   /// * [description] of the object or attribute.
   /// * [id]: For complex objects. If set, two object are equals if his property/properties specified are equals.
   /// * [type]: The canonical [type] in Constructo definition. Any direct equivalences are set by default for non inherited types:
-  ///     * `Object` => `Complex`
-  ///     * `Map`    => `Complex`
+  ///     * `Object` => `Object`
+  ///     * `Map`    => `Object`
   ///     * `List`   => `List`
-  ///     * `String` => `Text`
+  ///     * `String` => `String`
   ///     * `bool`   => `Boolean`
-  ///     * `num`    => `Float64`
-  ///     * `double` => `Float64`
-  ///     * `int`    => `Int64`
+  ///     * `num`    => `Double`
+  ///     * `double` => `Double`
+  ///     * `int`    => `Int`
   /// * [unit]: Unit of measure that stores.
   const Definition(
       {String name = null,
       String slug = null,
       String description = null,
       id = null,
-      Type type,
+      CType type,
       Unit unit = null});
 }
