@@ -3,6 +3,13 @@ import 'package:constructo/src/core/type.dart';
 
 /// Definition of an object.
 class Definition {
+  final String name;
+  final String slug;
+  final String description;
+  final id;
+  final CType type;
+  final Unit unit;
+
   /// Establish the properties of an object.
   ///
   /// * [name]: Real name. If not provided, is extracted from the class or variable name.
@@ -21,9 +28,21 @@ class Definition {
   /// * [unit]: Unit of measure that stores.
   const Definition(
       {String name = null,
-      String slug = null,
-      String description = null,
-      id = null,
-      CType type,
-      Unit unit = null});
+        String slug = null,
+        String description = null,
+        id = null,
+        CType type = null,
+        Unit unit = null})
+      : this.name = name,
+        this.slug = slug,
+        this.description = description,
+        this.id = id,
+        this.type = type,
+        this.unit = unit;
+
+  String toString() {
+    if (this.type == CObject) return "${type} ${slug} {}";
+    else if (this.type == CList) return "${type} ${slug} []";
+    else return "${type} ${slug} (${unit?.symbol ?? ""})";
+  }
 }
